@@ -8,6 +8,7 @@ const axios = require('axios')
 // Middleware
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
+app.use('/', require('./controllers/routes'))
 
 // Static Files Folder
 app.use(express.static("public"))
@@ -17,32 +18,7 @@ app.use(express.static("public"))
 app.set('view engine', 'ejs')
 
 // Routes
-app.get('/',(req,res)=>{
-    axios({
-        method:'get',
-        url:'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-    }).then((result)=>{
-        console.log(result.data.drinks[0].strDrink)
-        res.render('pages/index', { result } )
-        return;
 
-    }).catch((error)=>{
-        console.log(` !!!! ERROR !!!!`)
-        console.log(error)
-    })
-})
-
-app.get('/about',(req,res)=>{
-    res.render('pages/about.ejs')
-})
-
-app.get('/recipe', (req,res)=>{
-    res.send(`<h1>All Recipes</h1>`)
-})
-
-app.get('/recipe/:id', (req,res)=>{
-    res.send(`<h1>Specific Recipe</h1>`)
-})
 
 
 

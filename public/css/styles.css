@@ -3,10 +3,10 @@ html,body{
     font-family: 'Lato', sans-serif;
 }
 
-.card-container{
+/* .card-container{
     max-width: 400px;
     width: 100%;
-}
+} */
 
 .card-title{
     font-weight: 800;
