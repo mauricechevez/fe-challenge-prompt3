@@ -20,11 +20,11 @@ router.get('/about',(req,res)=>{
     res.render('pages/about.ejs')
 })
 
-router.get('/recipe', (req,res)=>{
+router.get('/recipes', (req,res)=>{
     res.send(`<h1>All Recipes</h1>`)
 })
 
-router.get('/recipe/:id', (req,res)=>{
+router.get('/recipes/:id', (req,res)=>{
     res.send(`<h1>Specific Recipe</h1>`)
 })
 
