@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>🍹 ¡Salud! 🍹 Drinks Recipes </title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <% // Render your search results here %>
+    <div class="container">
+        
+        <!-- Carousel -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://via.placeholder.com/800x400?text=First_Image" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Second_Image" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Third_Image" class="d-block w-100" alt="...">
+              </div></div>
+        </div>
+        <!-- End of Carousel -->
+        </div>
+        <!-- Card Group -->
+        <div class="container">
+            <h2 class="h1">Featured Drinks</h2>
+            <div class="row card-group text-center justify-content-center">
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4 border-primary">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg/preview" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Margarita</h5>
+                          <p class="card-text">The classic Margarita, made popular during the Prohibition era in the USA.</p>
+                          <a href="#" class="btn btn-secondary">Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/wx7hsg1504370510.jpg/preview" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Long Island Iced Tea</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg/preview" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Cosmopolitan</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4 border-primary">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg/preview" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Moscow Mule</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+          
+        <!-- END Card Group -->
+        <!-- Cocktails Card Group -->
+        <div class="container my-3">
+            <div class="row card-group text-center justify-content-center">
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4 border-primary">
+                        <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg/preview" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" style="font-weight: 800;">Margarita</h5>
+                          <p class="card-text">The classic Margarita, made popular during the Prohibition era in the USA.</p>
+                          <a href="#" class="btn btn-secondary">See Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4">
+                        <img src="https://via.placeholder.com/150x150?text=Margarita" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4">
+                        <img src="https://via.placeholder.com/150x150?text=Margarita" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md card-container">
+                    <div class="card mx-3 my-4">
+                        <img src="https://via.placeholder.com/150x150?text=Margarita" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END of Cocktails Card Group-->
+            
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>
