@@ -15,7 +15,6 @@ html,body{
 .ingredients-container{
     display: flex;
     justify-content: left;
-    /* padding:5px 50% 5px 5px; */
 }
 
 .item-ingr, .item-meas{

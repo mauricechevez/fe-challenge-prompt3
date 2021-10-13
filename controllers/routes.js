@@ -28,7 +28,11 @@ router.get('/about',(req,res)=>{
 })
 
 router.get('/recipes', (req,res)=>{
-    res.send(`<h1>All Recipes</h1>`)
+    res.render('pages/allrecipes.ejs', {
+        title:"Recipes | ",
+        taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes " 
+
+    })
 })
 
 router.get('/recipes/:id', (req,res)=>{
