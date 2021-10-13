@@ -11,3 +11,20 @@ html,body{
 .card-title{
     font-weight: 800;
 }
+
+.ingredients-container{
+    display: flex;
+    justify-content: left;
+    /* padding:5px 50% 5px 5px; */
+}
+
+.item-ingr, .item-meas{
+    display: block;
+    margin:5px 0px;
+}
+
+@media only screen and (max-device-width:767px){
+    .col > .ingredient-title {
+        margin-top: 25px !important;
+    }
+}

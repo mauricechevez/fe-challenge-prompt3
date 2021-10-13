@@ -1,0 +1,77 @@
+<div class="container my-5">
+  <h6>Recipe ID: <%= results.idDrink %></h6>
+  <h1 class="my-3"><%= results.strDrink %></h1>
+
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col">
+      <img
+        src="<%= results.strDrinkThumb %>"
+        alt="<%= results.strDrink %>"
+        title="<%= results.strDrink %>"
+        style="max-width: 500px; width: 100%"
+      />
+    </div>
+    <div class="col">
+        <h3 class="ingredient-title">Ingredients</h3>
+        <div class="ingredients-container">
+            
+            <div class="ingredient">
+                <% if (results.strIngredient1) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient1 %></b> -> <%= results.strMeasure1 %></span>
+                <% } %>
+                <% if (results.strIngredient2) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient2 %> -></b> <%= results.strMeasure2 %></span>
+                <% } %>
+                <% if (results.strIngredient3) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient3 %></b> -> <%= results.strMeasure3 %></span>
+                <% } %>
+                <% if (results.strIngredient4) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient4 %></b> -> <%= results.strMeasure4 %></span>
+                <% } %>
+                <% if (results.strIngredient5) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient5 %></b> -> <%= results.strMeasure5 %></span>
+                <% } %>
+                <% if (results.strIngredient6) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient6 %></b> -> <%= results.strMeasure6 %></span>
+                <% } %>
+                <% if (results.strIngredient7) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient7 %></b> -> <%= results.strMeasure7 %></span>
+                <% } %>
+                <% if (results.strIngredient8) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient8 %></b> -> <%= results.strMeasure8 %></span>
+                <% } %>
+                <% if (results.strIngredient9) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient9 %></b> -> <%= results.strMeasure9 %></span>
+                <% } %>
+                <% if (results.strIngredient10) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient10 %></b> -> <%= results.strMeasure10 %></span>
+                <% } %>
+                <% if (results.strIngredient11) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient11 %></b> -> <%= results.strMeasure11 %></span>
+                <% } %>
+                <% if (results.strIngredient12) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient12 %></b> -> <%= results.strMeasure12 %></span>
+                <% } %>
+                <% if (results.strIngredient13) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient13 %></b> -> <%= results.strMeasure13 %></span>
+                <% } %>
+                <% if (results.strIngredient14) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient14 %></b> -> <%= results.strMeasure14 %></span>
+                <% } %>
+                <% if (results.strIngredient15) { %>
+                    <span class="item-ingr"><b><%= results.strIngredient15 %></b> -> <%= results.strMeasure15 %></span>
+                <% } %>
+
+            </div>
+        </div>
+        
+        <p class="ingredients">
+            <%= results.str %>
+        </p>
+        <h3>Recipe Instructions</h3>
+        <p class="instructions">
+            <%= results.strInstructions %>
+        </p>
+    </div>
+  </div>
+</div>
