@@ -37,16 +37,15 @@
       <!-- Cards Here -->
       <% for(let i = 0; i < allDrinks.length; i++){ %>
         <div class="col ">
-          <div class="card p-2 drink-card">
-            <a href="/recipes/name/<%= allDrinks[i].strDrink  %> ">
-              <img src="<%= allDrinks[i].strDrinkThumb %>/preview" alt="<%=allDrinks[i].strDrink %>">
-            </a>
-          </div>
+          <a class="card p-2 drink-card" href="/recipes/name/<%= allDrinks[i].strDrink  %> ">
+  
+              <img src="<%= allDrinks[i].strDrinkThumb %>/preview" alt="<%=allDrinks[i].strDrink %>" title="<% allDrinks[i].strDrink  %> ">
+  
+          </a>
           <div class="card-body">
             <a class="drink-name" href="/recipes/name/<%=allDrinks[i].strDrink %>"><%=allDrinks[i].strDrink %></a>
           </div>
         </div>
-        
       <% } %> 
     </div>
   </div>
