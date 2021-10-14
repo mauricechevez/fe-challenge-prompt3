@@ -87,6 +87,8 @@ app.use(expressLayouts)
 
 ```
 
+# Resources
 
+Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios)
 
 

@@ -71,6 +71,26 @@ th{
     box-shadow: 5px 5px 5px #5d5d5d;
 }
 
+.numbers-container{
+    display: block;
+    position: relative;
+}
+
+.numbers-list{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    z-index: 10;
+    width: 200px;
+    padding: 1px 10px;
+    border: slateblue 2px solid;
+}
+
+.letter{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
 
 @media only screen and (max-device-width:767px){
     .col > .ingredient-title {
