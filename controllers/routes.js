@@ -28,10 +28,55 @@ router.get('/about',(req,res)=>{
 })
 
 router.get('/recipes', (req,res)=>{
-    res.render('pages/allrecipes.ejs', {
-        title:"Recipes | ",
-        taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes " 
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
+    .then((result)=>{
+        const allDrinks = result.data.drinks
+        // for(let i = 0; i < allDrinks.length; i++){
+        //     console.log(allDrinks[i].strDrink)
+        // }
+        res.render('pages/allrecipes.ejs', {
+            title:"Recipes | ",
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            allDrinks: allDrinks
+        })
+    })
+    .catch((error)=>{
+        console.log(`~~~~ ERROR in Alphabetical List~~~~`)
+        console.log(error)
+    })
+})
 
+router.get('/recipes/letter/:id', (req,res)=>{
+    const letter = req.params.id;
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f='+ letter)
+    .then((result)=>{
+        const allDrinks = result.data.drinks
+        res.render('pages/allrecipes.ejs', {
+            title:"Recipes | ",
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            allDrinks: allDrinks
+        })
+    })
+    .catch((error)=>{
+        console.log(`~~~~ ERROR in Alphabetical List~~~~`)
+        console.log(error)
+    })
+})
+
+router.get('/recipes/name/:name', (req,res)=>{
+    const name = req.params.name
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + name)
+    .then((result)=>{
+        const drinkName = result.data.drinks[0]
+        res.render('pages/recipe.ejs', {
+            title: result.data.drinks[0].strDrink,
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            results: result.data.drinks[0]
+        })
+    })
+    .catch((error)=>{
+        console.log('~~~~ ERROR in Name of Drink ~~~~')
+        console.log(error)
     })
 })
 
@@ -42,14 +87,11 @@ router.get('/recipes/:id', (req,res)=>{
     .then((result)=>{
         console.log(result.data.drinks[0].idDrink)
         res.render('pages/recipe.ejs',{
-            id : id,
             title:result.data.drinks[0].strDrink,
             taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
             results: result.data.drinks[0]
         })
     })
-    
-
 })
 
 module.exports = router

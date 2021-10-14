@@ -1,9 +1,55 @@
-<div class="container">
+<div class="container my-5">
   <h1>Recipes</h1>
-  <table cellpadding="0" cellspacing="0" border="0">
-    <tr>
-      <td>Cell 1</td>
-      <td>Cell 2</td>
-    </tr>
-  </table>
+  <nav class="alphabetic-navigation">
+    <ul class="nav-list">
+      <li>1-10</li>
+      <li><a href="/recipes/letter/a">A</a></li>
+      <li><a href="/recipes/letter/b">B</a></li>
+      <li><a href="/recipes/letter/c">C</a></li>
+      <li><a href="/recipes/letter/d">D</a></li>
+      <li><a href="/recipes/letter/e">E</a></li>
+      <li><a href="/recipes/letter/f">F</a></li>
+      <li><a href="/recipes/letter/g">G</a></li>
+      <li><a href="/recipes/letter/h">H</a></li>
+      <li><a href="/recipes/letter/i">I</a></li>
+      <li><a href="/recipes/letter/j">J</a></li>
+      <li><a href="/recipes/letter/k">K</a></li>
+      <li><a href="/recipes/letter/l">L</a></li>
+      <li><a href="/recipes/letter/m">M</a></li>
+      <li><a href="/recipes/letter/n">N</a></li>
+      <li><a href="/recipes/letter/o">O</a></li>
+      <li><a href="/recipes/letter/p">P</a></li>
+      <li><a href="/recipes/letter/q">Q</a></li>
+      <li><a href="/recipes/letter/r">R</a></li>
+      <li><a href="/recipes/letter/s">S</a></li>
+      <li><a href="/recipes/letter/t">T</a></li>
+      <li><a href="/recipes/letter/u">U</a></li>
+      <li><a href="/recipes/letter/v">V</a></li>
+      <li><a href="/recipes/letter/w">W</a></li>
+      <li><a href="/recipes/letter/x">X</a></li>
+      <li><a href="/recipes/letter/y">Y</a></li>
+      <li><a href="/recipes/letter/z">Z</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 card-group justify-content-center" >
+      <!-- Cards Here -->
+      <% for(let i = 0; i < allDrinks.length; i++){ %>
+        <div class="col ">
+          <div class="card p-2 drink-card">
+            <a href="/recipes/name/<%= allDrinks[i].strDrink  %> ">
+              <img src="<%= allDrinks[i].strDrinkThumb %>/preview" alt="<%=allDrinks[i].strDrink %>">
+            </a>
+          </div>
+          <div class="card-body">
+            <a class="drink-name" href="/recipes/name/<%=allDrinks[i].strDrink %>"><%=allDrinks[i].strDrink %></a>
+          </div>
+        </div>
+        
+      <% } %> 
+    </div>
+  </div>
+
+
 </div>
