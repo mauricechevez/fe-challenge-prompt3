@@ -3,10 +3,10 @@ html,body{
     font-family: 'Lato', sans-serif;
 }
 
-/* .card-container{
-    max-width: 400px;
-    width: 100%;
-} */
+.title{
+    text-transform: uppercase;
+    font-weight: 300;
+}
 
 .card-title{
     font-weight: 800;
@@ -22,10 +22,6 @@ html,body{
     margin:5px 0px;
 }
 
-
-th{
-    font-weight: 800;
-}
 
 .alphabetic-navigation{
     display: flex;
@@ -44,11 +40,23 @@ th{
     padding:5px;
 }
 
-.recipe-wrapper{
+
+
+.nav-link{
+    background: #212529;
+    padding:20px 0px;
+}
+
+.nav-link:hover{
+    background: hsl(210, 11%, 37%);
+    color: white;
+}
+
+/* .recipe-wrapper{
     display: flex;
     border: 5px solid red;
     flex-wrap: wrap;
-}
+} */
 
 .drink-name{
     font-weight: 700;

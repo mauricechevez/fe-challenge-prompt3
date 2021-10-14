@@ -90,5 +90,5 @@ app.use(expressLayouts)
 # Resources
 
 Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios)
-
+EJS Tutorial by Raddy - [link](https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/)
 
