@@ -2,22 +2,11 @@ const router = require('express').Router()
 const axios = require('axios')
 
 router.get('/',(req,res)=>{
-    axios({
-        method:'get',
-        url:'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-    }).then((result)=>{
-        console.log(result.data.drinks[0].strDrink)
         res.render('index', { 
-            result: result,
             title:null,
             taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes "
         } )
         return;
-
-    }).catch((error)=>{
-        console.log(` !!!! ERROR !!!!`)
-        console.log(error)
-    })
 })
 
 router.get('/about',(req,res)=>{
