@@ -44,6 +44,57 @@ router.get('/recipes', (req,res)=>{
     })
 })
 
+router.get('/recipes/no-alcohol', (req,res)=>{
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`)
+    .then((result)=>{
+        const noAlcohol = result.data.drinks
+        res.render('pages/nonalcoholic.ejs', {
+            title:"Recipes | ",
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            allDrinks: noAlcohol,
+        })
+    })
+    .catch((error)=>{
+        console.log('~~~~ ERROR in Non-Alcoholic Drink ~~~~')
+        console.log(error)
+    })
+})
+
+router.get('/recipes/mixed-drinks', (req,res)=>{
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink`)
+    .then((result)=>{
+        const mixedDrinks = result.data.drinks
+        console.log(mixedDrinks.length)
+        res.render('pages/mixedrinkslist.ejs', {
+            title:"Mixed Drinks | ",
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            allDrinks: mixedDrinks,
+        })
+    })
+    .catch((error)=>{
+        console.log('~~~~ ERROR in Mixed Drinks ~~~~')
+        console.log(error)
+    })
+})
+
+router.get('/recipes/cocktails', (req,res)=>{
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`)
+    .then((result)=>{
+        const cocktails = result.data.drinks
+        console.log(cocktails.length)
+        res.render('pages/cocktails.ejs', {
+            title:"Cocktails | ",
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            allDrinks: cocktails,
+        })
+    })
+    .catch((error)=>{
+        console.log('~~~~ ERROR in Mixed Drinks ~~~~')
+        console.log(error)
+    })
+})
+
+
 // Multiple Axios Calls
 router.get('/recipes/list/1-10', (req,res)=>{
     let drinksList01 = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=1`;
@@ -102,22 +153,27 @@ router.get('/recipes/list/1-10', (req,res)=>{
     })
 })
 
-router.get('/recipes/list/:id', (req,res)=>{
-    const letter = req.params.id;
-    axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f='+ letter)
-    .then((result)=>{
-        const allDrinks = result.data.drinks
-        res.render('pages/allrecipes.ejs', {
-            title:"Recipes | ",
-            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
-            allDrinks: allDrinks,
-            letter:letter
+router.get('/recipes/list/:letter', (req,res)=>{
+    const letter = req.params.letter;
+    if (letter === 'u' || letter === 'x'){
+        res.send(`<h1>Drinks starting with the letter "${letter}" do not exist in the database.</h1>`)
+    } else{ 
+        axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f='+ letter)
+        .then((result)=>{
+            const allDrinks = result.data.drinks
+            res.render('pages/allrecipes.ejs', {
+                title:"Recipes | ",
+                taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+                allDrinks: allDrinks,
+                letter:letter
+            })
         })
-    })
-    .catch((error)=>{
-        console.log(`~~~~ ERROR in Alphabetical List~~~~`)
-        console.log(error)
-    })
+        .catch((error)=>{
+            console.log(`~~~~ ERROR in Alphabetical List~~~~`)
+            console.log(error)
+        })
+    }
+    
 })
 
 router.get('/recipes/name/:name', (req,res)=>{

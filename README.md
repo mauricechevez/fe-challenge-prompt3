@@ -1,9 +1,20 @@
 # Front End Challenge
 
 # Third-Party API 
-I will be using the [CocktailDB](https://www.thecocktaildb.com/api.php) to create a Cocktail themed site.
+This project uses the [CocktailDB](https://www.thecocktaildb.com/api.php) to create a Cocktail themed site.
 
 # Routes
+
+## Routing Table
+| Verb | URL | Action (CRUD) | Description
+| ------- | ------- | ------- | ------- |
+| GET | / | Index (Read) | The homepage with list of drinks | 
+| GET | /about | (Read) | About the project |
+| GET | /recipes | (Read) | Shows list of drinks, in alphabetical order, for visitor to browse. |
+| GET | /recipes/list/1-10 | (Read) | Shows list of drinks that begin with numbers | 
+| GET | /recipes/list/:letter | (Read) | List of drinks based on the first letter in the name of the drink |
+| GET | /recipes/name/:name | (Read) | Shows each drink's picture, ingredients and recipe instructions. To be used for the search box as well|
+| GET | /* | (Read) | For 404.
 
 # JSON Data from API
 The data comes back as `result.data.drinks`, each with its own index number. Here is a sample of a returned query for "margarita":
@@ -64,28 +75,6 @@ The data comes back as `result.data.drinks`, each with its own index number. Her
 
 ```
 
-# 
-# EJS Layout
-Note to self: 
-```
-npm install express-ejs-layouts
-```
-
-### Requirements for EJS Layouts
-By default, `ejs-layouts` is looking for a file called `layout.ejs`. This can be changed:
-
-```
-...TBC...
-```
-### Adding to the server app
-```js
-// Imports (what I called Requirements)
-const expressLayouts = require('express-ejs-layouts')
-
-//Middleware
-app.use(expressLayouts)
-
-```
 
 # Resources
 
