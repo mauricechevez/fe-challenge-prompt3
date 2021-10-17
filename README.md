@@ -96,6 +96,7 @@ Here is a list of software required for this project to work for you:
 
 # Future Considerations
 * Create more 404 routes to handle intentionally requested "bad" urls.
+* The **U** and **X** links (under all recipes, route `/recipes/list/:letter`) do not exist in the database. I've currently set it send a generic message stating these do not exist. I need to create a proper template for these pages.
 * Add text to go over the carousel images, to describe what they are, maybe even go to a blog post about the drinks or something realted.
 * Add more styling or text to the cup logo.
 
