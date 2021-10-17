@@ -105,3 +105,6 @@ Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-
 
 EJS including EJS-Layouts Tutorial by Raddy - [link](https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/)
 
+## Images
+[Pexels](https://www.pexels.com/photo/three-cocktail-drinks-602750/) - For free images used on this site that did not come from the API.
+
