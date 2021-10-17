@@ -1,5 +1,10 @@
+const express = require('express')
 const router = require('express').Router()
 const axios = require('axios')
+const app = express()
+
+app.use(express.urlencoded({extended: true}))
+
 
 router.get('/',(req,res)=>{
         res.render('index', { 
@@ -167,15 +172,45 @@ router.get('/recipes/list/:letter', (req,res)=>{
 
 router.get('/recipes/name/:name', (req,res)=>{
     const name = req.params.name
-    console.log(typeof (name))
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + name)
     .then((result)=>{
         const drinkName = result.data.drinks[0]
         res.render('pages/recipe.ejs', {
-            title: result.data.drinks[0].strDrink,
+            title: drinkName.strDrink,
             taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
             results: result.data.drinks[0]
         })
+       }       
+    )
+    .catch((error)=>{
+        setError = error
+        console.log('~~~~ ERROR in Name of Drink ~~~~')
+        console.log(error)
+        return res.redirect('/')
+        
+    })
+})
+
+// For Search Input
+router.get('/recipes/result/:name', (req,res)=>{
+    const name = req.query.name
+    console.log(name)
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + name)
+    .then((result)=>{
+        if (result.data.drinks == null){
+            return res.redirect('/')
+        }
+
+        if(result.data.drinks != null || result.data.drinks != 'undefined' || result.data.drinks != "null"){
+        const drinkName = result.data.drinks[0]
+        res.render('pages/recipe.ejs', {
+            title: drinkName.strDrink,
+            taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+            results: result.data.drinks[0]
+        })
+        } else if (result.data.drinks == null){
+            return res.redirect('/')
+        }
     })
     .catch((error)=>{
         console.log('~~~~ ERROR in Name of Drink ~~~~')

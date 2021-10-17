@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 3000;
 const expressLayouts = require('express-ejs-layouts')
 
 // Middleware
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: false}))
+// app.use(express.urlencoded({ extended: false }));
 
 
 // Static Files Folder
