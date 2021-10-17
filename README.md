@@ -1,4 +1,6 @@
 # Front End Challenge
+This challenge has been deployed to Heroku. Check it out:
+[Salud! Drinks Finder](https://salud-drinks-finder.herokuapp.com/)
 
 # Third-Party API 
 This project uses the [CocktailDB](https://www.thecocktaildb.com/api.php) to create a Cocktail themed site.
@@ -95,6 +97,7 @@ Here is a list of software required for this project to work for you:
 # Future Considerations
 * Create more 404 routes to handle intentionally requested "bad" urls.
 * Add real pictures for the slideshow / carousel to replace the placeholder images.
+* Add more styling or text to the cup logo.
 
 # Resources
 
