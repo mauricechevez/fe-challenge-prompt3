@@ -5,7 +5,7 @@ html,body{
 
 .title{
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .card-title{
@@ -52,11 +52,11 @@ html,body{
     color: white;
 }
 
-/* .recipe-wrapper{
-    display: flex;
-    border: 5px solid red;
-    flex-wrap: wrap;
-} */
+.line-divider{
+    height: 1px;
+    background-color: black;
+    margin-bottom: 1rem;
+}
 
 .drink-name{
     font-weight: 700;
