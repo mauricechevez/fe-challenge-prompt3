@@ -77,10 +77,6 @@ The data comes back as `result.data.drinks`, each with its own index number. Her
 
 ```
 
-# Future Considerations
-* Create more 404 routes to handle intentionally requested "bad" urls.
-* Add real pictures for the slideshow / carousel to replace the placeholder images.
-
 
 # Installation Requirements
 Here is a list of software required for this project to work for you:
@@ -94,6 +90,11 @@ Here is a list of software required for this project to work for you:
 1. Fork and Clone this respository to your local machine
 2. Open index.html in your browser to play or
 3. Open the directory in your text editor of choice to view or edit the code
+
+
+# Future Considerations
+* Create more 404 routes to handle intentionally requested "bad" urls.
+* Add real pictures for the slideshow / carousel to replace the placeholder images.
 
 # Resources
 
