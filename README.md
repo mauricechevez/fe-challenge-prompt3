@@ -96,7 +96,7 @@ Here is a list of software required for this project to work for you:
 
 # Future Considerations
 * Create more 404 routes to handle intentionally requested "bad" urls.
-* Add real pictures for the slideshow / carousel to replace the placeholder images.
+* Add text to go over the carousel images, to describe what they are, maybe even go to a blog post about the drinks or something realted.
 * Add more styling or text to the cup logo.
 
 # Resources
@@ -106,5 +106,5 @@ Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-
 EJS including EJS-Layouts Tutorial by Raddy - [link](https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/)
 
 ## Images
-[Pexels](https://www.pexels.com/photo/three-cocktail-drinks-602750/) - For free images used on this site that did not come from the API.
+[Pexels](https://www.pexels.com/) - For free images used on this site that did not come from the API.
 
