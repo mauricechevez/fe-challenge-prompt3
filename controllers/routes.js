@@ -198,7 +198,11 @@ router.get('/recipes/result/:name', (req,res)=>{
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + name)
     .then((result)=>{
         if (result.data.drinks == null){
-            return res.redirect('/')
+            return res.render('pages/recipe_notfound.ejs', {
+                title: name,
+                taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+                results: null
+            })
         }
 
         if(result.data.drinks != null || result.data.drinks != 'undefined' || result.data.drinks != "null"){

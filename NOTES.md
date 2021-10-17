@@ -48,4 +48,5 @@ for the `<ul>` tag, the attribute `class` has `show`. The attribute `data-bs-pop
 
 This task can be accomplished through javascript.
 
-
+## Null returns from API
+`result.data.drinks` comes back as `null` when the API doesn't have data from your query. Knowing this, I will need to handle errors if someone 
