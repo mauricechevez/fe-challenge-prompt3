@@ -3,9 +3,7 @@
 # Third-Party API 
 This project uses the [CocktailDB](https://www.thecocktaildb.com/api.php) to create a Cocktail themed site.
 
-# Routes
-
-## Routing Table
+# Routing Table
 | Verb | URL | Action (CRUD) | Description
 | ------- | ------- | ------- | ------- |
 | GET | / | Index (Read) | The homepage with list of drinks | 
@@ -14,7 +12,11 @@ This project uses the [CocktailDB](https://www.thecocktaildb.com/api.php) to cre
 | GET | /recipes/list/1-10 | (Read) | Shows list of drinks that begin with numbers | 
 | GET | /recipes/list/:letter | (Read) | List of drinks based on the first letter in the name of the drink |
 | GET | /recipes/name/:name | (Read) | Shows each drink's picture, ingredients and recipe instructions. To be used for the search box as well|
-| GET | /* | (Read) | For 404.
+| GET | /recipes/result/:name | (Read) | For results originating from the search field in the navbar.|
+| GET | /recipes/no-alcohol | (Read) | Shows list of non-alcoholic drinks | 
+| GET | /recipes/mixed-drinks | (Read) | Shows items from the category "Ordinary Drinks" from the API | 
+| GET | /recipes/cocktails | (Read) | Shows items from the category "Cocktails" from the API |
+| GET | /* | (Read) | For 404. |
 
 # JSON Data from API
 The data comes back as `result.data.drinks`, each with its own index number. Here is a sample of a returned query for "margarita":
@@ -75,9 +77,27 @@ The data comes back as `result.data.drinks`, each with its own index number. Her
 
 ```
 
+# Future Considerations
+* Create more 404 routes to handle intentionally requested "bad" urls.
+* Add real pictures for the slideshow / carousel to replace the placeholder images.
+
+
+# Installation Requirements
+Here is a list of software required for this project to work for you:
+* Express
+* Axios
+* EJS
+* EJS Layouts
+* Nodemon (optional, but highly recommended.)
+
+## Install Locally
+1. Fork and Clone this respository to your local machine
+2. Open index.html in your browser to play or
+3. Open the directory in your text editor of choice to view or edit the code
 
 # Resources
 
-Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios)
-EJS Tutorial by Raddy - [link](https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/)
+Multiple Axios calls - [link](https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios) - used for page which renders the drinks beginning with numbers.
+
+EJS including EJS-Layouts Tutorial by Raddy - [link](https://raddy.co.uk/blog/nodejs-express-layouts-and-partials/)
 
