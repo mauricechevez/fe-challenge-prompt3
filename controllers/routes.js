@@ -150,7 +150,12 @@ router.get('/recipes/list/1-10', (req,res)=>{
 router.get('/recipes/list/:letter', (req,res)=>{
     const letter = req.params.letter;
     if (letter === 'u' || letter === 'x'){
-        res.send(`<h1>Drinks starting with the letter "${letter}" do not exist in the database.</h1>`)
+        // res.send(`<h1>Drinks starting with the letter "${letter}" do not exist in the database.</h1>`)
+        res.render('pages/letter_notfound.ejs', {
+                title:"Recipes | ",
+                taglineTitle: "🍹 ¡Salud! 🍹 Drinks Recipes",
+                letter:letter
+        })
     } else{ 
         axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f='+ letter)
         .then((result)=>{

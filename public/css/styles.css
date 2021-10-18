@@ -100,8 +100,21 @@ html,body{
 }
 
 
+@media only screen and (max-device-width:991px){
+    .col > .ingredient-title {
+        margin-top: 25px !important;
+    }
+    form.d-flex {
+        margin-bottom: 1rem;
+    }
+}
+
+
 @media only screen and (max-device-width:767px){
     .col > .ingredient-title {
         margin-top: 25px !important;
+    }
+    form.d-flex {
+        margin-bottom: 1rem;
     }
 }
