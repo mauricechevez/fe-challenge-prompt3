@@ -13,13 +13,12 @@
     <div class="col">
         <h3 class="ingredient-title">Ingredients</h3>
         <div class="ingredients-container">
-            
             <div class="ingredient">
                 <% if (results.strIngredient1) { %>
                     <span class="item-ingr"><b><%= results.strIngredient1 %></b> -> <%= results.strMeasure1 %></span>
                 <% } %>
                 <% if (results.strIngredient2) { %>
-                    <span class="item-ingr"><b><%= results.strIngredient2 %> -></b> <%= results.strMeasure2 %></span>
+                    <span class="item-ingr"><b><%= results.strIngredient2 %></b> -> <%= results.strMeasure2 %></span>
                 <% } %>
                 <% if (results.strIngredient3) { %>
                     <span class="item-ingr"><b><%= results.strIngredient3 %></b> -> <%= results.strMeasure3 %></span>
@@ -71,6 +70,9 @@
         <p class="instructions">
             <%= results.strInstructions %>
         </p>
+        <h6><b>Served in:</b> <%= results.strGlass %> </h6>
+        <h6><b>Category:</b> <%= results.strAlcoholic %> </h6>
     </div>
+    
   </div>
 </div>
